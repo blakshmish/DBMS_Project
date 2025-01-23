@@ -135,7 +135,7 @@ export default function AddStaff() {
           </div>
           <div>
             <br></br>
-            <button style= {{backgroundColor: '#3498db'}}type="submit">SAVE</button>
+            <button style= {{backgroundColor: '#3498db'}} type="submit">SAVE</button>
           </div>
         </form>
       </div>
