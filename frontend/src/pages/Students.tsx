@@ -10,11 +10,31 @@ import {
   Paper,
   Checkbox,
   Button,
+  TextField,
 } from "@mui/material";
 import { GetStudents } from "./api/studentApi";
 
 function Students({ dept, sem, sendIdsToParent }) {
   const [studentsData, setstudentsData] = React.useState<Student[]>([]);
+
+  const [filter, setFilter] = React.useState('');
+
+  const handleSearchChange = (event) => {
+    const query = event.target.value;
+    setFilter(query);
+
+    const filteredRows = studentsData.filter(row => 
+      row.usn.includes(query) 
+    );
+    const remainingRows = studentsData.filter(row => 
+      !row.usn.includes(query) 
+    );
+    
+    setstudentsData([...filteredRows,...remainingRows])
+
+  };
+
+
 
   const handleAddStudent = (id: number) => {
     setstudentsData((prevSelected) =>
@@ -35,6 +55,8 @@ function Students({ dept, sem, sendIdsToParent }) {
 
     sendIdsToParent(studentsData);
   };
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -77,6 +99,16 @@ function Students({ dept, sem, sendIdsToParent }) {
           <TableHead>
             <TableRow>
               <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell>
+              <TextField
+                label="Search"                
+                size="small"
+                value={filter}
+                onChange={handleSearchChange}
+              />
+              </TableCell>
               <TableCell>First Name</TableCell>
               <TableCell>Middle Name</TableCell>
               <TableCell>Last Name</TableCell>
@@ -123,6 +155,7 @@ function Students({ dept, sem, sendIdsToParent }) {
                     remove
                   </Button>
                 </TableCell>
+                <TableCell>{student.usn}</TableCell>
                 <TableCell>{student.fname}</TableCell>
                 <TableCell>{student.mname}</TableCell>
                 <TableCell>{student.lname}</TableCell>

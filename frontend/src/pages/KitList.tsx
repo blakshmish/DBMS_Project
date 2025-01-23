@@ -46,7 +46,7 @@ function KitList() {
   return (
     <>
       <div>
-        <h1>Kit List</h1>
+        <h2>Kit List</h2>
       </div>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} size="small" aria-label="Kits list">

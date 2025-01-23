@@ -23,7 +23,6 @@ import AddComplaint from './pages/AddComplaint'
 import AddIssue from "./pages/IssueCreate";
 import AllotKit from './pages/AllotKit'
 import LabTxnList from './pages/LabTxnList'
-import IotLabExperiments from './pages/LabExp'
 
 function App() {
 
@@ -36,6 +35,7 @@ function App() {
       <Route path="/Labhome" element={<Labhome />} />
       <Route path="/depthome" element={<Depthome />} />
       <Route path="/add-staff" element={<AddStaff />} />
+      <Route path="/staff-list" element={<StaffList />} />
       <Route path="/add-kit" element={<AddKit />} />
       <Route path="/kits" element={<KitList />} />
       <Route path="/components/:kitId" element={<CompList />} />
