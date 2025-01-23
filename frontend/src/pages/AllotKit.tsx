@@ -115,7 +115,7 @@ export default function AllotKit() {
           <br></br>
           <label color="orange"> {errMessage} </label>
         </div>
-        <button type="submit"> Save</button>
+        <button style= {{backgroundColor: '#3498db'}} type="submit"> Save</button>
       </form>
      
       <Students

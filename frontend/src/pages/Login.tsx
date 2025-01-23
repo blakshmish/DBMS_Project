@@ -72,7 +72,7 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
         />
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
-        <button type="button" onClick={handleLogin}>
+        <button style= {{backgroundColor: '#3498db'}} type="button" onClick={handleLogin}>
           Login
         </button>
       </form>

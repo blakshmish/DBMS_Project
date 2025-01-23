@@ -1,8 +1,6 @@
 from django.db import models
 from django.db.models.constraints import CheckConstraint, Q
 
-# Create your models here.
-
 
 class Staff(models.Model):
     staff_id = models.AutoField(db_column='staff_id', primary_key=True)

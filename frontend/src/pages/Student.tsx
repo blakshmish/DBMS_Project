@@ -46,19 +46,6 @@ const StudentDashboard: React.FC = () => {
           dept: 'ISE'
         });
 
-
-    //   setLabExperiments([
-    //     {
-    //       id: 1,
-    //       name: 'IoT Sensor Interfacing',
-    //       components: ['Arduino', 'Temperature Sensor', 'Humidity Sensor']
-    //     },
-    //     {
-    //       id: 2,
-    //       name: 'MQTT Protocol Implementation',
-    //       components: ['ESP8266', 'Raspberry Pi', 'Breadboard']
-    //     }
-    //   ]);
     };
 
     fetchStudentData();

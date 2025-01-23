@@ -5,6 +5,7 @@ import HomePage from "./pages/home"
 
 import NotFound from './pages/NotFound'
 import StudentDashboard from './pages/Student'
+import IotLabExperiments from './pages/LabExp'
 import Labhome from './pages/Labhome'
 import CompList from "./pages/CompList";
 import AddComp from "./pages/AddComp";
@@ -19,6 +20,7 @@ import Depthome from './pages/Depthome'
 import AddStaff from './pages/AddStaff'
 import AddKit from './pages/AddKit'
 import KitList from './pages/KitList'
+import StaffList from './pages/StaffList'
 import AddComplaint from './pages/AddComplaint'
 import AddIssue from "./pages/IssueCreate";
 import AllotKit from './pages/AllotKit'
