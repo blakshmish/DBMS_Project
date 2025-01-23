@@ -1,6 +1,7 @@
 import react from 'react'
 import { BrowserRouter,Router, Route, Navigation, Navigate, Routes } from 'react-router-dom'
 import Login from "./pages/Login"
+import HomePage from "./pages/home"
 
 import NotFound from './pages/NotFound'
 import Student from './pages/Student'
@@ -27,6 +28,7 @@ function App() {
   return (
     <BrowserRouter>
      <Routes>
+     <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/student" element={<Student />} />
       <Route path="/Labhome" element={<Labhome />} />
