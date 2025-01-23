@@ -82,29 +82,6 @@ const StudentDashboard: React.FC = () => {
           <p>Department: {studentData?.dept}</p>
         </div>
 
-        <div className="kit-issues">
-          <h3>Kit Issues</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Issue ID</th>
-                <th>Description</th>
-                <th>Component</th>
-                <th>Status</th>
-                <th>Reported On</th>
-              </tr>
-            </thead>
-            <tbody>
-              {kitIssues.map(issue => (
-                <tr key={issue.kit_id}>
-                  <td>{issue.kit_id}</td>
-                  <td>{issue.description}</td>
-                  <td>{issue.status}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
       </div>
     </div>
   );
