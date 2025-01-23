@@ -2,7 +2,7 @@
     {
         "model": "api.Staff",
         "fields": {
-            "type": "Lab Staff",
+            "type": "Lab",
             "fname": "Admin",
             "lname": "(Lab)",
             "email": "admin@rvce.edu",

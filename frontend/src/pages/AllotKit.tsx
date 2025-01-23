@@ -4,10 +4,14 @@ import { GetActiveKitList } from "./api/kitApi";
 import { LabTransactionCreate } from "./api/labApi";
 import { Student } from "../interfaces/Student";
 import Students from "./Students";
+import { useNavigate } from "react-router-dom";
 
 import { LabTransactions } from "../interfaces/LabTransactions";
 
 export default function AllotKit() {
+
+  const navigate = useNavigate();
+
   const [kits, setKits] = React.useState([
     {
       kit_id: 0,
@@ -71,6 +75,8 @@ export default function AllotKit() {
     labTxn.forEach( (lt) => {
       LabTransactionCreate(lt);
     } )
+    
+    navigate("/lab-txn-list")
 
   };
 

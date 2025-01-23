@@ -20,6 +20,7 @@ import AddKit from './pages/AddKit'
 import KitList from './pages/KitList'
 import AddComplaint from './pages/AddComplaint'
 import AllotKit from './pages/AllotKit'
+import LabTxnList from './pages/LabTxnList'
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
       <Route path="/add-component" element={<AddComp />} />
       <Route path="/add-complaint" element={<AddComplaint />} />
       <Route path="/allot-kit" element={<AllotKit />} />
+      <Route path="/lab-txn-list" element={<LabTxnList />} />
 
 
       <Route path="*" element={ <NotFound />} />

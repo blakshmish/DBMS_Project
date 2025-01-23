@@ -20,12 +20,14 @@ function Login() {
       setErrorMessage("Invalid email format. Please enter a valid email.");
       return;
     }
-    if (!usnRegex.test(pwd)) {
-      setErrorMessage("Invalid USN format. Please enter in RVCEnnBxxnnn format.");
-      return;
-    }
 
     if (role === "STUDENT") {
+      if (!usnRegex.test(pwd)) {
+        setErrorMessage(
+          "Invalid USN format. Please enter in RVCEnnBxxnnn format."
+        );
+        return;
+      }
       const res = await CheckStudentLogin({ email, pwd });
       if (res != null) {
         navigate("/student");
