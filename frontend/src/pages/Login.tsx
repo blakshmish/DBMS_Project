@@ -30,7 +30,10 @@ function Login() {
       }
       const res = await CheckStudentLogin({ email, pwd });
       if (res != null) {
-        navigate("/student");
+        
+        console.log(res)
+
+        navigate(`/student/${res.student_id}`);
       } else {
         setErrorMessage("Invalid login credentials");
       }

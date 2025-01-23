@@ -34,7 +34,7 @@ export default function AddComplaint() {
     <>
 
     <div className="container">
-      <h1>Add Complaint Category</h1>
+      <h2><center>Add Complaint Category</center></h2>
       <form onSubmit={handleSubmit}>
         <div>
           <input

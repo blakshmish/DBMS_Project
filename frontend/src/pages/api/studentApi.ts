@@ -26,6 +26,16 @@ export const AddStudent = async (student: any) => {
   }
 };
 
+export const GetStudent = async (id: any) => {
+  try {
+    return (await axiosInstance
+      .get(`api/student/${id}/`)
+      .then((resp) => resp.data)) as Student;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const GetStudents = async (dept: any, sem: any) => {
   try {
     return (await axiosInstance

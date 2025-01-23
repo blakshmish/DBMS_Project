@@ -82,6 +82,14 @@ class StudentListView (generics.ListAPIView):
         return Student.objects.filter(dept=dept, semester=sem)
 
 
+class StudentView(generics.RetrieveAPIView):
+    permission_classes = [AllowAny]
+
+    def get_queryset(self):
+        studentId = self.kwargs.get('id')
+        return Student.objects.filter(student_id=studentId)
+
+
 # student Login view
 
 class StudentLoginView (APIView):

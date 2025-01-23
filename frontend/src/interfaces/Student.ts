@@ -1,12 +1,12 @@
 export interface Student {
-  student_id: number;
+  student_id?: number;
   fname: string;
-  mname: string;
-  lname: string;
+  mname?: string;
+  lname?: string;
   usn: string;
-  email: string;
+  email?: string;
   dept: string;
-  semester: string;
-  pwd: string;
-  isSelected: boolean;
+  semester?: string;
+  pwd?: string;
+  isSelected?: boolean;
 }

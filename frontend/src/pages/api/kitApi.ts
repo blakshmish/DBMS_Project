@@ -123,3 +123,24 @@ export const GetComplaintsList = async () => {
     console.error("Error fetching complaint list:", error);
   }
 };
+
+export const CreateIssue = async (issue: any) => {
+  try {
+    return (await axiosInstance
+      .post("api/issue/create/", issue)
+      .then((resp) => resp.data)) as Issue;
+  } catch (error) {
+    console.error("Error creating issue:", error);
+  }
+};
+
+export const GetIssuesList = async () => {
+  try {
+    return (await axiosInstance
+      .get("api/issue/<status>")
+      .then((resp) => resp.data)) as Issue[];
+  } catch (error) {
+    console.error("Error fetching complaint list:", error);
+  }
+};
+

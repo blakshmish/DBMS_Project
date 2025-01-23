@@ -4,7 +4,7 @@ import Login from "./pages/Login"
 import HomePage from "./pages/home"
 
 import NotFound from './pages/NotFound'
-import Student from './pages/Student'
+import StudentDashboard from './pages/Student'
 import Labhome from './pages/Labhome'
 import CompList from "./pages/CompList";
 import AddComp from "./pages/AddComp";
@@ -20,8 +20,10 @@ import AddStaff from './pages/AddStaff'
 import AddKit from './pages/AddKit'
 import KitList from './pages/KitList'
 import AddComplaint from './pages/AddComplaint'
+import AddIssue from "./pages/IssueCreate";
 import AllotKit from './pages/AllotKit'
 import LabTxnList from './pages/LabTxnList'
+import IotLabExperiments from './pages/LabExp'
 
 function App() {
 
@@ -30,7 +32,7 @@ function App() {
      <Routes>
      <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/student" element={<Student />} />
+      <Route path="/student/:id" element={<StudentDashboard />} />
       <Route path="/Labhome" element={<Labhome />} />
       <Route path="/depthome" element={<Depthome />} />
       <Route path="/add-staff" element={<AddStaff />} />
@@ -40,7 +42,9 @@ function App() {
       <Route path="/add-component" element={<AddComp />} />
       <Route path="/add-complaint" element={<AddComplaint />} />
       <Route path="/allot-kit" element={<AllotKit />} />
+      <Route path="/add-issue" element={<AddIssue />} />
       <Route path="/lab-txn-list" element={<LabTxnList />} />
+      <Route path="/lab-exp" element={<IotLabExperiments />} />
 
 
       <Route path="*" element={ <NotFound />} />

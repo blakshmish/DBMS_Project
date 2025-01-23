@@ -10,6 +10,7 @@ urlpatterns = [
     path("students/<dept>/<sem>/",
          views.StudentListView.as_view(), name="student-list"),
     path("studentLogin/", views.StudentLoginView.as_view(), name="student-login"),
+    path("student/<pk>/", views.StudentView.as_view(), name="student-details"),
 
     path("kit/create/", views.KitCreateView.as_view(), name="kit-create"),
     path("kits/", views.KitListView.as_view(), name="kit-list"),
