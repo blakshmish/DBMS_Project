@@ -44,7 +44,7 @@ function StaffList() {
 
   return (
     <>
-      <div><h1>Staff List</h1></div>
+      <div><h2>Staff List</h2></div>
       <TableContainer component={Paper}>
         <Table>
           <TableHead>

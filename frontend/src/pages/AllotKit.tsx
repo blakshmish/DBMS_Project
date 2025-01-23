@@ -76,7 +76,7 @@ export default function AllotKit() {
       LabTransactionCreate(lt);
     } )
     
-    navigate("/lab-txn-list")
+    
 
   };
 
