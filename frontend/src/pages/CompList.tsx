@@ -33,7 +33,6 @@ function CompList() {
     };
     fetchComponents();
   }, [kitId]);
-  
 
   const handleAddComponent = () => {
     navigate(`/add-component?kitId=${kitId}`);
@@ -54,15 +53,25 @@ function CompList() {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell><b>Name</b></TableCell>
-              <TableCell><b>Status</b></TableCell>
+              <TableCell>
+                <b>Name</b>
+              </TableCell>
+              <TableCell>
+                <b>Status</b>
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {components.map((component) => (
               <TableRow key={component.comp_id}>
                 <TableCell>{component.comp_name}</TableCell>
-                <TableCell>{ component.status? "G" : "D"}</TableCell>
+                <TableCell>
+                  {component.status === "G"
+                    ? "Good"
+                    : component.status === "D"
+                    ? "Damaged"
+                    : "Obsolete"}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
