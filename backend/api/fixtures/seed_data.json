@@ -1,0 +1,13 @@
+[
+    {
+        "model": "api.Staff",
+        "fields": {
+            "type": "Lab Staff",
+            "fname": "Admin",
+            "lname": "(Lab)",
+            "email": "admin@rvce.edu",
+            "role": "Admin",
+            "pwd": "Admin123"
+        }
+    }
+]

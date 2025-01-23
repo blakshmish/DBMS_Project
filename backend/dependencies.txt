@@ -1,0 +1,13 @@
+asgiref
+Django
+django-cors-headers
+djangorestframework
+djangorestframework-simplejwt
+PyJWT
+pytz
+sqlparse
+python-dotenv
+mysqlclient
+mysql-connector-python
+pymysql
+drf-yasg
