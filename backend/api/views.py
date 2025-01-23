@@ -158,12 +158,14 @@ class LabTransactionsCreateView(generics.CreateAPIView):
     serializer_class = LabTransactionSerializer
     permission_classes = [AllowAny]
 
-    def perform_create(self, request):
-        serializer = LabTransactionSerializer(data=request.data, many=True)
+    def perform_create(self, serializer):
+        # serializer = LabTransactionSerializer(data=request.data, many=True)
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            print(serializer.errors)
+            # return Response(serializer.data, status=status.HTTP_201_CREATED)
+            # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class LabTransactionsListAllView (generics.ListAPIView):
