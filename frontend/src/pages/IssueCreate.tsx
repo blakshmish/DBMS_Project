@@ -224,7 +224,7 @@ export default function AddIssue() {
             style={{
               width: "100%",
               padding: "10px",
-              backgroundColor: "#4caf50",
+              backgroundColor: "#3498db",
               color: "white",
               fontSize: "16px",
               fontWeight: "bold",
