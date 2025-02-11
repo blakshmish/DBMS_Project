@@ -6,6 +6,7 @@ import HomePage from "./pages/home"
 import NotFound from './pages/NotFound'
 import StudentDashboard from './pages/Student'
 import IotLabExperiments from './pages/LabExp'
+import IotKitComponents from './pages/CompInfo'
 import Labhome from './pages/Labhome'
 import CompList from "./pages/CompList";
 import AddComp from "./pages/AddComp";
@@ -47,6 +48,7 @@ function App() {
       <Route path="/add-issue" element={<AddIssue />} />
       <Route path="/lab-txn-list" element={<LabTxnList />} />
       <Route path="/lab-exp" element={<IotLabExperiments />} />
+      <Route path="/comp-info" element={<IotKitComponents />} />
 
 
       <Route path="*" element={ <NotFound />} />

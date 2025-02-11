@@ -61,16 +61,23 @@ const StudentDashboard: React.FC = () => {
     window.location.href = '/lab-exp';
   };
 
+  const handleCompInfo = () => {
+    // Navigation or modal for raising complaint
+    window.location.href = '/comp-info';
+  };
+
+
   return (
     <div className="student-dashboard">
       <div className="sidebar">
         
         <div className="sidebar-actions">
           <button onClick={handleLabExp}>Lab Experiments</button>
+          <button onClick={handleCompInfo}>View Component Info</button>
           <button onClick={handleRaiseIssue}>
             Raise Issue
           </button>
-          <button>View Component Info</button>
+          
           <button onClick={() => window.location.href = '/login'}>Log Out</button>
         </div>
       </div>
